@@ -1,0 +1,14 @@
+{
+  "name": "templates",
+  "homepage": "https://github.com/upstage/templates",
+  "_release": "58e71b5b27",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "58e71b5b27def63ba16436381fbc35c9ab181c16"
+  },
+  "_source": "git://github.com/upstage/templates.git",
+  "_target": "*",
+  "_originalSource": "templates",
+  "_direct": true
+}

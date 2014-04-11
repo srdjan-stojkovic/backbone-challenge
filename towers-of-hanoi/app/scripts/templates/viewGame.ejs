@@ -1,0 +1,37 @@
+<% if(data.status===1) { %>
+<div id="overlay">
+    <div id="result">
+    <h1>Win!</h1>
+    <p>Moves: <%=data.moves %>/<%=data.minMoves %></p>
+    <a href="#" class="btn btn-default" onclick="$('#overlay').hide();">Close</a>
+    </div>
+</div>
+<% } %>
+
+<h2>Towers of Hanoi Game</h2>
+<small>Object of the game is to move all the disks over to Tower 3. You cannot place a larger disk onto a smaller disk.</small>
+
+<hr />
+
+<div class="lvl">
+    <div class="btn-group pull-left">
+      <button type="button" data-value="1" class="btn <% if(data.lvl==1) { %> btn-success <% } else { %> btn-default <% } %>">Easy</button>
+      <button type="button" data-value="2" class="btn <% if(data.lvl==2) { %> btn-success <% } else { %> btn-default <% } %>">Medium</button>
+      <button type="button" data-value="3" class="btn <% if(data.lvl==3) { %> btn-success <% } else { %> btn-default <% } %>">Hard</button>
+      <button type="button" data-value="4" class="btn <% if(data.lvl==4) { %> btn-success <% } else { %> btn-default <% } %>">Crazy</button>
+    </div>
+</div>
+
+
+<p>Moves: <b><%=data.moves %></b></p>
+<p><small>Min. possible number of moves: <%=data.minMoves %></small></p>
+
+<% for (var i=0; i<data.poles; i++) { %>
+
+    <div class="pole pull-left pole-<%=i %>" data-id="<%=i %>">
+        <% for (var j=0; j<data.rings; j++) { %>
+            <div class="ring-<%=data.gamestate[i][j] %>"><%=data.gamestate[i][j] %></div>
+        <% } %>
+    </div>
+
+<% } %>

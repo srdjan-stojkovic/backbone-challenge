@@ -1,0 +1,72 @@
+body {
+    background: #fafafa;
+}
+
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 300px;
+}
+
+.pole
+{
+    float: left;
+    width: 150px;
+    margin: 5px;
+    text-align: center;
+    background: #ccc;
+    cursor: pointer;
+    overflow: hidden;
+    color: #fff;
+    padding: 10px 0;
+    border: solid 2px #fff;
+}
+
+.lvl
+{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.pole.active
+{
+    background: #e7e7e7;
+}
+
+.pole div
+{
+    margin: 10px auto;
+    padding: 5px;
+    clear: both;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.ring-0 { width: 1%; visibility: hidden }
+.ring-1 { width: 30%; background: #a4c400 }
+.ring-2 { width: 40%; background: #1ba1e2 }
+.ring-3 { width: 50%; background: #f472d0 }
+.ring-4 { width: 60%; background: #fa6800 }
+.ring-5 { width: 70%; background: #e3c800 }
+.ring-6 { width: 80%; background: #96608a }
+.ring-7 { width: 90%; background: #a20025 }
+.ring-8 { width: 100%; background: #647687 }
+
+#overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.7);
+}
+#result
+{
+    margin: 100px auto;
+    width: 400px;
+    height: 200px;
+    border: solid 1px #ccc;
+    background: #fff;
+    padding: 10px;
+}

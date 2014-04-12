@@ -34,6 +34,7 @@ define([
             {
                 this.model.lvl = l;
                 this.model.setLevel();
+                this.model.status = 0;
                 this.render();
             }
         },
@@ -42,6 +43,11 @@ define([
 
         poleBeforeClicked: function(e)
         {
+            if(this.model.status==1)
+            {
+                // game is ended, prevent clicking
+                return false;
+            }
             this.poleClicked(e);
             $('.pole').removeClass('active');
             if(this.pole1!==null)

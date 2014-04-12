@@ -36,6 +36,11 @@ define([
                 this.poles = 3;
                 this.rings = 8;
             }
+            if(this.lvl==5)
+            {
+                this.poles = 3;
+                this.rings = 12;
+            }
             this.gamestate = [];
             this.moves = 0;
             this.status = 0;
@@ -62,6 +67,7 @@ define([
             for(var i=0; i<this.rings; i++)
             {
                 sum += this.gamestate[pole][i];
+
             }
             return (sum==0) ? true : false;
         },
@@ -90,8 +96,10 @@ define([
                 this.gamestate[pole1][p1.index] = 0;
                 this.moves++;
                 return true;
+            } else
+            {
+                return false;
             }
-            return false;
         },
 
         // Check for victory conditions

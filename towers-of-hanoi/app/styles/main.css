@@ -10,15 +10,16 @@ body {
 .pole
 {
     float: left;
-    width: 150px;
+    width: 180px;
     margin: 5px;
     text-align: center;
-    background: #ccc;
+    background: #ccc url(../images/pole.png) center top no-repeat;
     cursor: pointer;
     overflow: hidden;
     color: #fff;
-    padding: 10px 0;
-    border: solid 2px #fff;
+    padding: 20px 0 0 0;
+    border: solid 5px #fff;
+    position: relative;
 }
 
 .lvl
@@ -30,7 +31,12 @@ body {
 
 .pole.active
 {
-    background: #e7e7e7;
+    border: solid 5px #a4c400 !important;
+}
+
+.pole:hover
+{
+    border: solid 5px #f7f7f7;
 }
 
 .pole div
@@ -50,7 +56,25 @@ body {
 .ring-5 { width: 70%; background: #e3c800 }
 .ring-6 { width: 80%; background: #96608a }
 .ring-7 { width: 90%; background: #a20025 }
-.ring-8 { width: 100%; background: #647687 }
+.ring-8 { width: 100%; background: #aa00ff }
+.ring-9 { width: 100%; background: #00aba9 }
+.ring-10 { width: 100%; background: #008a00 }
+.ring-11 { width: 100%; background: #60a917 }
+.ring-12 { width: 100%; background: #d80073 }
+
+.level-5 .ring-1 { width: 12%; }
+.level-5 .ring-2 { width: 16%; }
+.level-5 .ring-3 { width: 24%; }
+.level-5 .ring-4 { width: 32%; }
+.level-5 .ring-5 { width: 40%; }
+.level-5 .ring-6 { width: 48%; }
+.level-5 .ring-7 { width: 56%; }
+.level-5 .ring-8 { width: 64%; }
+.level-5 .ring-9 { width: 72%; }
+.level-5 .ring-10 { width: 80%; }
+.level-5 .ring-11 { width: 88%; }
+.level-5 .ring-12 { width: 96%; }
+.level-5 .pole div { margin: 5px auto; padding: 3px; }
 
 #overlay
 {
@@ -60,6 +84,7 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(255,255,255,0.7);
+    z-index: 900;
 }
 #result
 {
@@ -69,4 +94,10 @@ body {
     border: solid 1px #ccc;
     background: #fff;
     padding: 10px;
+}
+#illegal
+{
+    display: none;
+    color: red;
+    margin-left: 20px;
 }

@@ -26,7 +26,6 @@ define([
         lvlClicked: function(e)
         {
             var l = $(e.currentTarget).attr("data-value");
-            if(l==this.model.lvl) return false;
             if(this.model.moves>0)
             {
                 var r=confirm("Restart game?");
@@ -62,12 +61,13 @@ define([
             var p = $(e.currentTarget).attr("data-id");
             if(this.pole1 === null)
             {
+                // Can't be empty
                 if(this.model.isEmpty(p))
                 {
+                    this.illegalMove();
                     this.pole1 = this.pole2 = null;
                     return false;
                 }
-                // Can't be empty
                 this.pole1 = p;
                 return true;
             }
@@ -76,12 +76,14 @@ define([
                 // Can't be same as first
                 if(this.pole1 == p)
                 {
+                    this.illegalMove();
                     this.pole1 = this.pole2 = null;
                     return false;
                 }
                 // Can't be full
                 if(this.model.isFull(p))
                 {
+                    this.illegalMove();
                     this.pole1 = this.pole2 = null;
                     return false;
                 }
@@ -99,6 +101,10 @@ define([
             {
                 this.render();
             }
+            else
+            {
+                this.illegalMove();
+            }
             this.pole1 = this.pole2 = null;
         },
 
@@ -109,6 +115,12 @@ define([
             this.model.checkVictoryConditions();
             this.el.innerHTML =  _.template( gameTemplate, { data: this.model, pole1: this.pole1, pole2: this.pole2 } );
             return this;
+        },
+
+        illegalMove: function()
+        {
+            $('#illegal').show().delay(1000).fadeOut(1000);
+            return true;
         }
 
     });

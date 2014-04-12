@@ -1,7 +1,7 @@
 backbone-challenge
 ==================
 
-Backbone challenge #1
+Backbone challenge #1: Towers of Hanoi
 
 
 The objective of the puzzle is to move the entire stack to another rod, obeying the following simple rules:
@@ -13,3 +13,5 @@ The objective of the puzzle is to move the entire stack to another rod, obeying 
 With three disks, the puzzle can be solved in seven moves.
 
 <a href="http://marsmedia.info/git/towers-of-hanoi/app/" target="_blank">Click here for demo</a>
+
+------------------------------------------------------------------------------------------------------------------------

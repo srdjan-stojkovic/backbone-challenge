@@ -1,4 +1,0 @@
-templates
-=========
-
-Templates for Upstage.

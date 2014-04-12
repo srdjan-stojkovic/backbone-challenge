@@ -9,36 +9,44 @@ define([
     var ModelgameModel = Backbone.Model.extend({
 
         initialize: function(){
-            this.lvl = 1;
+            this.lvl = 2;
             this.setLevel();
         },
 
         // Setting game level
 
         setLevel: function(){
+            this.poles = 3;
             if(this.lvl==1)
             {
-                this.poles = 3;
                 this.rings = 3;
             }
             if(this.lvl==2)
             {
-                this.poles = 3;
                 this.rings = 4;
             }
             if(this.lvl==3)
             {
-                this.poles = 3;
                 this.rings = 5;
             }
             if(this.lvl==4)
             {
-                this.poles = 3;
-                this.rings = 8;
+                this.rings = 6;
             }
             if(this.lvl==5)
             {
-                this.poles = 3;
+                this.rings = 7;
+            }
+            if(this.lvl==6)
+            {
+                this.rings = 8;
+            }
+            if(this.lvl==7)
+            {
+                this.rings = 10;
+            }
+            if(this.lvl==8)
+            {
                 this.rings = 12;
             }
             this.gamestate = [];

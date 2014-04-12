@@ -1,12 +1,10 @@
 body {
     background: #fafafa;
 }
-
 .hero-unit {
     margin: 50px auto 0 auto;
     width: 300px;
 }
-
 .pole
 {
     float: left;
@@ -21,61 +19,30 @@ body {
     border: solid 5px #fff;
     position: relative;
 }
-
 .lvl
 {
     float: left;
     width: 100%;
     margin-bottom: 10px;
 }
-
 .pole.active
 {
     border: solid 5px #a4c400 !important;
 }
-
 .pole:hover
 {
     border: solid 5px #f7f7f7;
 }
-
 .pole div
 {
     margin: 10px auto;
-    padding: 5px;
+    padding: 2px 0;
+    font-weight: bold;
+    font-size: 12px;
     clear: both;
     border-radius: 3px;
     -moz-border-radius: 3px;
 }
-
-.ring-0 { width: 1%; visibility: hidden }
-.ring-1 { width: 30%; background: #a4c400 }
-.ring-2 { width: 40%; background: #1ba1e2 }
-.ring-3 { width: 50%; background: #f472d0 }
-.ring-4 { width: 60%; background: #fa6800 }
-.ring-5 { width: 70%; background: #e3c800 }
-.ring-6 { width: 80%; background: #96608a }
-.ring-7 { width: 90%; background: #a20025 }
-.ring-8 { width: 100%; background: #aa00ff }
-.ring-9 { width: 100%; background: #00aba9 }
-.ring-10 { width: 100%; background: #008a00 }
-.ring-11 { width: 100%; background: #60a917 }
-.ring-12 { width: 100%; background: #d80073 }
-
-.level-5 .ring-1 { width: 12%; }
-.level-5 .ring-2 { width: 16%; }
-.level-5 .ring-3 { width: 24%; }
-.level-5 .ring-4 { width: 32%; }
-.level-5 .ring-5 { width: 40%; }
-.level-5 .ring-6 { width: 48%; }
-.level-5 .ring-7 { width: 56%; }
-.level-5 .ring-8 { width: 64%; }
-.level-5 .ring-9 { width: 72%; }
-.level-5 .ring-10 { width: 80%; }
-.level-5 .ring-11 { width: 88%; }
-.level-5 .ring-12 { width: 96%; }
-.level-5 .pole div { margin: 5px auto; padding: 3px; }
-
 #overlay
 {
     position: fixed;
@@ -101,3 +68,46 @@ body {
     color: red;
     margin-left: 20px;
 }
+#moves
+{
+    margin-top: 10px;
+    display: inline-block;
+}
+#moves b
+{
+    background: #333;
+    color: #d1d2d3;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+#min
+{
+    font-size: 15px;
+}
+.ring-0 { width: 1%; visibility: hidden }
+.ring-1 { width: 30%; background: #a4c400 }
+.ring-2 { width: 40%; background: #1ba1e2 }
+.ring-3 { width: 50%; background: #f472d0 }
+.ring-4 { width: 60%; background: #fa6800 }
+.ring-5 { width: 70%; background: #e3c800 }
+.ring-6 { width: 80%; background: #96608a }
+.ring-7 { width: 90%; background: #a20025 }
+.ring-8 { width: 100%; background: #aa00ff }
+.ring-9 { width: 100%; background: #00aba9 }
+.ring-10 { width: 100%; background: #008a00 }
+.ring-11 { width: 100%; background: #60a917 }
+.ring-12 { width: 100%; background: #d80073 }
+
+.level-hd .ring-1 { width: 12%; }
+.level-hd .ring-2 { width: 16%; }
+.level-hd .ring-3 { width: 24%; }
+.level-hd .ring-4 { width: 32%; }
+.level-hd .ring-5 { width: 40%; }
+.level-hd .ring-6 { width: 48%; }
+.level-hd .ring-7 { width: 56%; }
+.level-hd .ring-8 { width: 64%; }
+.level-hd .ring-9 { width: 72%; }
+.level-hd .ring-10 { width: 80%; }
+.level-hd .ring-11 { width: 88%; }
+.level-hd .ring-12 { width: 96%; }
+.level-hd .pole div { margin: 5px auto; padding: 3px; }

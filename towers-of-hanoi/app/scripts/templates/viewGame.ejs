@@ -17,7 +17,7 @@
 
 
 <h2>Towers of Hanoi Game</h2>
-<small>Object of the game is to move all the disks over to Tower 3. You cannot place a larger disk onto a smaller disk.</small>
+<small><b>RULES:</b> Object of the game is to move all the disks over to another rod. You cannot place a larger disk onto a smaller disk.</small>
 
 <hr />
 
@@ -25,17 +25,20 @@
     <div class="btn-group pull-left">
       <button type="button" data-value="1" class="btn <% if(data.lvl==1) { %> btn-success <% } else { %> btn-default <% } %>">Practice</button>
       <button type="button" data-value="2" class="btn <% if(data.lvl==2) { %> btn-success <% } else { %> btn-default <% } %>">Easy</button>
-      <button type="button" data-value="3" class="btn <% if(data.lvl==3) { %> btn-success <% } else { %> btn-default <% } %>">Medium</button>
-      <button type="button" data-value="4" class="btn <% if(data.lvl==4) { %> btn-success <% } else { %> btn-default <% } %>">Hard</button>
-      <button type="button" data-value="5" class="btn <% if(data.lvl==5) { %> btn-success <% } else { %> btn-default <% } %>">Insane</button>
+      <button type="button" data-value="3" class="btn <% if(data.lvl==3) { %> btn-success <% } else { %> btn-default <% } %>">Remedial</button>
+      <button type="button" data-value="4" class="btn <% if(data.lvl==4) { %> btn-success <% } else { %> btn-default <% } %>">Medium</button>
+      <button type="button" data-value="5" class="btn <% if(data.lvl==5) { %> btn-success <% } else { %> btn-default <% } %>">Hard</button>
+      <button type="button" data-value="6" class="btn <% if(data.lvl==6) { %> btn-success <% } else { %> btn-default <% } %>">Very Hard</button>
+      <button type="button" data-value="7" class="btn <% if(data.lvl==7) { %> btn-success <% } else { %> btn-default <% } %>">Insane</button>
+      <button type="button" data-value="8" class="btn <% if(data.lvl==8) { %> btn-success <% } else { %> btn-default <% } %>">Lonely Island</button>
     </div>
 </div>
 
 
-<p>Moves: <b><%=data.moves %></b> <span id="illegal">Illegal move!</span> </p>
-<p><small>Min. possible number of moves: <%=data.minMoves %></small></p>
+<p id="moves">Moves: <b><%=data.moves %></b> <span id="illegal">Illegal move!</span> </p>
+<p id="min"><small>Min. possible number of moves: <%=data.minMoves %></small></p>
 
-<div class="level-<%=data.lvl %>">
+<div class="level<% if(data.lvl>6) { %>-hd<% } %>">
 <% for (var i=0; i<data.poles; i++) { %>
 
     <div class="pole pull-left pole-<%=i %>" data-id="<%=i %>">
